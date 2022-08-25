@@ -15,6 +15,10 @@ Post.init(
       type: Datatypes.STRING,
       allowNull: false,
     },
+    content: {
+      type: Datatypes.TEXT,
+      allowNull: false,
+    },
     post_url: {
       type: Datatypes.STRING,
       allowNull: false,
@@ -32,6 +36,7 @@ Post.init(
   },
   {
     sequelize,
+    timestamps: true,
     freezeTableName: true,
     underscored: true,
     modelName: "post",
