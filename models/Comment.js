@@ -1,4 +1,4 @@
-const { Model, Datatypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
 // Creating our Comment model
@@ -7,17 +7,17 @@ class Comment extends Model {}
 Comment.init(
   {
     id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
-      primaryKey: false,
+      primaryKey: true,
     },
     content: {
-      type: Datatypes.TEXT,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     // This post_id will belong to the posting user
     post_id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       references: {
         model: "post",
@@ -26,7 +26,7 @@ Comment.init(
     },
     // This user_id will belong to the commenting user
     user_id: {
-      type: Datatypes.INTEGER,
+      type: DataTypes.INTEGER,
       references: {
         model: "user",
         key: "id",
