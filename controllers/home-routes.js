@@ -1,22 +1,25 @@
 const router = require("express").Router();
-// const sequelize = require("../config/connection");
+const sequelize = require("../config/connection");
 const { Post, Comment, User } = require("../models");
 
 // GET all posts
 router.get("/", (req, res) => {
   console.log(req.session);
   Post.findAll({
-    attributes: {
-      exclude: ["user_id", "updatedAt"],
-    },
+    attributes: ["id", "title", "content", "post_url", "user_id"],
     include: [
-      { model: User, attributes: { exclude: ["password", "createdAt"] } },
-      { model: Comment },
+      {
+        model: Comment,
+        attributes: ["id", "content", "post_id", "created_at"],
+        model: User,
+        attributes: ["username"],
+      },
     ],
   })
     .then((dbPostData) => {
+      console.log(dbPostData);
       const posts = dbPostData.map((post) => post.get({ plain: true }));
-      res.render("homepage", { posts, loggedIn: req.session.loggedIn });
+      res.render("homepage", { posts });
     })
     .catch((err) => {
       console.log(err);
