@@ -6,7 +6,7 @@ const { Post, Comment, User } = require("../models");
 router.get("/", (req, res) => {
   console.log(req.session);
   Post.findAll({
-    attributes: ["id", "title", "content", "post_url", "user_id"],
+    attributes: ["id", "title", "content", "post_url", "user_id", "created_at"],
     include: [
       {
         model: Comment,
@@ -25,6 +25,11 @@ router.get("/", (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
+});
+
+// Get Login page route
+router.get("/login", (req, res) => {
+  res.render("login");
 });
 
 module.exports = router;

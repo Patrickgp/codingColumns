@@ -16,6 +16,11 @@ const users = [
     email: "paige@email.com",
     password: "password",
   },
+  {
+    username: "Arlo",
+    email: "arlo@email.com",
+    password: "password",
+  },
 ];
 
 const posts = [
@@ -43,6 +48,12 @@ const posts = [
     post_url: "www.petsmart.com",
     user_id: 3,
   },
+  {
+    title: "Awooofuh",
+    content: "More kibkobs plzzz.",
+    post_url: "www.facebook.com",
+    user_id: 4,
+  },
 ];
 
 const comments = [
@@ -66,6 +77,11 @@ const comments = [
     content: "Hmm...suspicious?",
     post_id: 3,
     user_id: 1,
+  },
+  {
+    content: "Yes yes all the kibly kobz...More!!!",
+    post_id: 5,
+    user_id: 3,
   },
 ];
 
