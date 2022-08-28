@@ -25,7 +25,7 @@ const users = [
 
 const posts = [
   {
-    title: "Am I a hollaback gurl?",
+    title: "Cyblorg lorg lorg bubbles bubbles",
     content: "This code is bananas, B-A-N-A-N-A-S",
     post_url: "www.google.com",
     user_id: 1,

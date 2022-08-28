@@ -78,11 +78,12 @@ router.post("/", (req, res) => {
     });
 });
 
-// POST /api/post/:id
+// POST /api/posts/:id
 router.post("/:id", (req, res) => {
   Post.update(
     {
       title: req.body.title,
+      content: req.body.content,
     },
     {
       where: {
