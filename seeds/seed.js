@@ -2,21 +2,25 @@ const { User, Post, Comment } = require("../models");
 
 const users = [
   {
+    id: 1,
     username: "Patrick",
     email: "patrick@email.com",
     password: "password",
   },
   {
+    id: 2,
     username: "Lindsay",
     email: "lindsay@email.com",
     password: "password",
   },
   {
+    id: 3,
     username: "Paige",
     email: "paige@email.com",
     password: "password",
   },
   {
+    id: 4,
     username: "Arlo",
     email: "arlo@email.com",
     password: "password",
@@ -27,31 +31,31 @@ const posts = [
   {
     title: "Cyblorg lorg lorg bubbles bubbles",
     content: "This code is bananas, B-A-N-A-N-A-S",
-    post_url: "www.google.com",
+    post_url: "https://www.google.com",
     user_id: 1,
   },
   {
     title: "Thinking about fake content is hard",
     content: "How to fake a personality with puns and snarky titles",
-    post_url: "www.yahoo.com",
+    post_url: "https://www.yahoo.com",
     user_id: 1,
   },
   {
     title: "Test Testerson is testing for Test Inc.",
     content: "Tech Mogul Test Testerson is testing the limits of testing",
-    post_url: "www.buzzfeed.com",
+    post_url: "https://www.buzzfeed.com",
     user_id: 2,
   },
   {
     title: "Memoirs of a hungry Doggy",
     content: "I have snacks and kibbles but I'm always hungry",
-    post_url: "www.petsmart.com",
+    post_url: "https://www.petsmart.com",
     user_id: 3,
   },
   {
     title: "Awooofuh",
     content: "More kibkobs plzzz.",
-    post_url: "www.facebook.com",
+    post_url: "https://www.facebook.com",
     user_id: 4,
   },
 ];
