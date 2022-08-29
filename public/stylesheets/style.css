@@ -160,6 +160,13 @@ main {
   width: 300px;
 }
 
+.post-content {
+  text-align: center;
+  padding: 100px 0;
+  border: #1e2f23 2px solid;
+  border-radius: 5px;
+}
+
 .edit-post-form {
   margin-bottom: 5%;
 }
