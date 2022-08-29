@@ -36,16 +36,9 @@ router.get("/", (req, res) => {
 
 // GET /dashboard/edit/:id
 router.get("/edit/:id", (req, res) => {
-  Post.findOne({
-    where: {
-      id: req.params.id,
-    },
-    attributes: ["id", "title", "content", "post_url", "created_at"],
+  Post.findByPk(req.params.id, {
+    attributes: ["id", "post_url", "title", "content", "created_at"],
     include: [
-      {
-        model: User,
-        attributes: ["username"],
-      },
       {
         model: Comment,
         attributes: ["id", "content", "post_id", "user_id", "created_at"],
@@ -54,16 +47,22 @@ router.get("/edit/:id", (req, res) => {
           attributes: ["username"],
         },
       },
+      {
+        model: User,
+        attributes: ["username"],
+      },
     ],
   })
     .then((dbPostData) => {
-      if (!dbPostData) {
-        res.status(404).json({ message: "No post found with this id" });
-        return;
+      if (dbPostData) {
+        const post = dbPostData.get({ plain: true });
+        res.render("edit-post", {
+          post,
+          loggedIn: true,
+        });
+      } else {
+        res.status(404).end();
       }
-      // serialize the data before passing to handlebars template
-      const post = dbPostData.get({ plain: true });
-      res.render("edit-post", { post, loggedIn: req.session.loggedIn });
     })
     .catch((err) => {
       console.log(err);
