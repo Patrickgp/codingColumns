@@ -20,4 +20,10 @@ module.exports = {
       .split("/")[0]
       .split("?")[0];
   },
+  absolute_url_format: (url) => {
+    if (!/^https?:\/\//i.test(url)) {
+      url = "https://" + url;
+    }
+    return url;
+  },
 };
