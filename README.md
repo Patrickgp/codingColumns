@@ -6,7 +6,7 @@
   ##  
 
   # Description
-  The goal of this project was to create a CMS-style blog site where users can create accounts and publish articles, blog posts, thoughts and opinions. Users can post, comment and share thoughts on many different topics. Once a user logs in they can manage all of their posts on their dashboard as well as create posts from the dashboard as well.
+  The goal of this project was to create a CMS-style blog site where users can create accounts and publish articles, blog posts, thoughts and opinions. Users can post, comment and share thoughts on many different topics. Once a user logs in they can manage all of their posts on their dashboard as well as create posts from their dashboard.
   ### Tech used in program: HTML, CSS, JavaScript, Node.js, BCrypt, Sequelize, Express, Handlebars, MySQL2
 
   # Table of Contents
