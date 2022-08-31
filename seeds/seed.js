@@ -31,31 +31,26 @@ const posts = [
   {
     title: "Cyblorg lorg lorg bubbles bubbles",
     content: "This code is bananas, B-A-N-A-N-A-S",
-    post_url: "https://www.google.com",
     user_id: 1,
   },
   {
     title: "Thinking about fake content is hard",
     content: "How to fake a personality with puns and snarky titles",
-    post_url: "https://www.yahoo.com",
     user_id: 1,
   },
   {
     title: "Test Testerson is testing for Test Inc.",
     content: "Tech Mogul Test Testerson is testing the limits of testing",
-    post_url: "https://www.buzzfeed.com",
     user_id: 2,
   },
   {
     title: "Memoirs of a hungry Doggy",
     content: "I have snacks and kibbles but I'm always hungry",
-    post_url: "https://www.petsmart.com",
     user_id: 3,
   },
   {
     title: "Awooofuh",
     content: "More kibkobs plzzz.",
-    post_url: "https://www.facebook.com",
     user_id: 4,
   },
 ];

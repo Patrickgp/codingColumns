@@ -1,9 +1,6 @@
 <article class="post">
   <div class="title">
     <a href="/post/{{id}}">{{title}}</a>
-    <span><a href="{{post_url}}" target="_blank">({{format_url
-          post_url
-        }})</a></span>
   </div>
   <div class="meta">
     Posted by
@@ -11,7 +8,9 @@
     on
     {{format_date created_at}}
     |
-    <a href="/post/{{id}}">{{comments.length}}
-      {{format_plural "comment" comments.length}}</a>
+    <a href="/post/{{id}}">
+      {{comments.length}}
+      {{format_plural "comment" comments.length}}
+    </a>
   </div>
 </article>

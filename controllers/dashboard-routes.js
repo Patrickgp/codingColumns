@@ -8,7 +8,7 @@ router.get("/", withAuth, (req, res) => {
     where: {
       user_id: req.session.user_id,
     },
-    attributes: ["id", "title", "content", "post_url", "created_at"],
+    attributes: ["id", "title", "content", "created_at"],
     include: [
       {
         model: User,
@@ -38,7 +38,7 @@ router.get("/", withAuth, (req, res) => {
 // GET /dashboard/edit/:id
 router.get("/edit/:id", withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
-    attributes: ["id", "post_url", "title", "content", "created_at"],
+    attributes: ["id", "title", "content", "created_at"],
     include: [
       {
         model: Comment,

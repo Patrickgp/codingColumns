@@ -11,19 +11,4 @@ module.exports = {
     }
     return word;
   },
-
-  format_url: (url) => {
-    return url
-      .replace("http://", "")
-      .replace("https://", "")
-      .replace("www.", "")
-      .split("/")[0]
-      .split("?")[0];
-  },
-  absolute_url_format: (url) => {
-    if (!/^https?:\/\//i.test(url)) {
-      url = "https://" + url;
-    }
-    return url;
-  },
 };
